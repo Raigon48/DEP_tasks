@@ -1,5 +1,5 @@
 // http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
 
-function printArray(array){
-    return array.join(',');
+function printArray(stringList){
+    return stringList.join(',');
 }

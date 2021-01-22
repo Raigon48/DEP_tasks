@@ -18,10 +18,11 @@ The middle character(s) of the word represented as a string.
 
 function getMiddle(strValue) {
     let result;
-    if (strValue.length % 2) 
-        result = strValue[Math.floor(strValue.length / 2)];
+    let strLen = strValue.length;
+    if (strLen % 2) 
+        result = strValue[Math.floor(strLen / 2)];
     else
-        result = strValue[strValue.length / 2 - 1] + strValue[strValue.length / 2];
+        result = strValue[strLen / 2 - 1] + strValue[strLen / 2];
     
     return result;
   }

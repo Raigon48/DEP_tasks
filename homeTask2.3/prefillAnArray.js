@@ -22,8 +22,8 @@ Code Examples
 
 function prefill(length, value) {
     if(parseInt(length) !== Math.abs(length)){
-      let typeError =  new TypeError();
-      typeError.message = length +" is invalid";
+      const typeError =  new TypeError();
+      typeError.message = `${length} is invalid`;
       throw typeError;
     }
     return parseInt(length) ? Array(length).fill(value): [];

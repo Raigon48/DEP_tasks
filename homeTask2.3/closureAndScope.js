@@ -13,9 +13,9 @@ We already implemented that function, but when we actually run the code, the res
 */
 
 function createFunctions(numOfFunctions) {
-    var callbacks = [];
+    const callbacks = [];
   
-    for (var i = 0; i < numOfFunctions; i++) {
+    for (let i = 0; i < numOfFunctions; i++) {
       let currentValue = i;
       callbacks.push(function () {
         return currentValue;

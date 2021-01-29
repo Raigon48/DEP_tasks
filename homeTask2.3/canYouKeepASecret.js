@@ -16,7 +16,7 @@
 */
 
 function createSecretHolder(secret) {
-    let object = {
+    const object = {
       getSecret: function () {
         return secret;
       },

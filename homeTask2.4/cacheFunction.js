@@ -4,9 +4,9 @@
 
 function cache(func) {
     
-    let cachedResults = {};
+    const cachedResults = {};
     return function () {
-      let key = JSON.stringify(arguments);
+      const key = JSON.stringify(arguments);
       if (!(key in cachedResults)) {
         cachedResults[key] = func.apply(null, arguments);
       }

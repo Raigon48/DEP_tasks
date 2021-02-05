@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Youtube Search</title>
+</head>
+<body>
+    <template id="searchTemplate">
+        <div class="head">
+            <p>Video Search</p>
+            <input id="textInput" type="text" placeholder="Search Input"/>
+            <button id="searchBtn">SEARCH</button>
+        </div>
+    </template>
+
+    <template id="thumbnailTemplate">
+        <article class="video-container">
+            <a>
+                <img src="" alt="thumbnail"/>
+            </a>
+            <h1 class="title"></h1>
+            <p class="author"></p>
+            <p class="published-date"></p>
+            <p class="count-of-views"></p>
+            <p class="description"></p>
+        </article>
+    </template>
+    <script src="js/globals.js"></script>
+    <script src="js/loadElement.js"></script>
+    <script src="js/apiCall.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ const MAX_RESULT = 15;
 let VIDEO_DATA = [];
 
 let nextPageToken = '';
+let NUMBER_OF_CARDS = 5;
 
 const PAGE_STATE = {
     currentPage : 1,

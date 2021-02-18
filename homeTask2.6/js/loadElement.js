@@ -12,7 +12,7 @@ function createHorizontalThumbnailList(pageNumber) {
 }
 
 function createThumbnail(pageNumber) {
-    const start = (pageNumber-1)*5;
+    const start = (pageNumber-1)*NUMBER_OF_CARDS;
     const end = pageNumber*5;
 
     if(document.querySelector('.horizontalList')) {

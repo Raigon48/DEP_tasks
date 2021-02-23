@@ -1,24 +1,34 @@
 export function createHeadlines(headlinesList) {
-    let newsBlockTemplate = document.querySelector("#news-block-template");
     const blogList = document.querySelector(".blogList");
 
     headlinesList.forEach(data => {
         const {title, description, url, urlToImage} = data;
-        const template = newsBlockTemplate.content.cloneNode(true);
+        const template = document.createElement('article');
 
-        const anchor = template.querySelector('a');
-        anchor.setAttribute(`href`, url);
-        anchor.setAttribute(`target`, `_`);
+        const figure = document.createElement('figure');
+        const section = document.createElement('section');
+        template.appendChild(figure);
+        template.appendChild(section);
         
-        const image = template.querySelector('img');
+        const image = document.createElement('img');
         image.setAttribute(`src`, urlToImage);
         image.setAttribute(`alt`, title);
-        
-        const heading = template.querySelector('.heading');
-        heading.textContent = `${title}`;
+        figure.appendChild(image);
 
-        const desc = template.querySelector('.description');
+        
+        const heading = document.createElement('h2');
+        heading.textContent = `${title}`;
+        section.appendChild(heading);
+
+        const desc = document.createElement('p');
         desc.textContent = `${description}`;
+        section.appendChild(desc);
+
+        const anchor = document.createElement('a');
+        anchor.setAttribute(`href`, url);
+        anchor.setAttribute(`target`, `_`);
+        section.appendChild(anchor);
+
 
         blogList.appendChild(template);
 
